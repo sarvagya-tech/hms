@@ -98,8 +98,20 @@ const LabTests = () => {
     fetchReports();
   }, []);
 
-  const handleBookTest = (testName) => {
-    setBookingStatus(`Booking request for ${testName} sent! Our team will contact you for sample collection.`);
+  const handleBookTest = async (testName, price) => {
+    try {
+      const response = await api.post('/test-bookings', {
+        testName,
+        price,
+        collectionType: 'home'
+      });
+      
+      if (response.data.success) {
+        setBookingStatus(`Success! Booking for ${testName} confirmed. ID: ${response.data.data._id}`);
+      }
+    } catch (err) {
+      setBookingStatus('Failed to book test. Please check your connection and try again.');
+    }
     setTimeout(() => setBookingStatus(null), 5000);
   };
 
@@ -234,7 +246,7 @@ const LabTests = () => {
                       <span>Home Collection</span>
                     </div>
                     <button 
-                      onClick={() => handleBookTest(test.name)}
+                      onClick={() => handleBookTest(test.name, test.price)}
                       className="bg-primary-600 text-white px-6 py-3 rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-primary-600/20 transition-all active:scale-95"
                     >
                       Book Now
