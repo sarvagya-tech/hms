@@ -19,9 +19,15 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Enable CORS
+const allowedOrigins = [
+  'http://localhost:5174',
+  'http://localhost:5173',
+  process.env.CORS_ORIGIN
+].filter(origin => origin); // Remove undefined/null
+
 app.use(
   cors({
-    origin: 'http://localhost:5174', // Frontend URL
+    origin: allowedOrigins,
     credentials: true,
   })
 );
