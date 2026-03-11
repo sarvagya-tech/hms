@@ -20,31 +20,31 @@ function App() {
           <Route path="/pharmacy" element={<PharmacyStore />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          
+
           {/* Dashboard Routes protected by Auth check */}
-          <Route 
-            path="/dashboard/appointments" 
+          <Route
+            path="/dashboard/appointments"
             element={
               <ProtectedRoute>
                 <Appointments />
               </ProtectedRoute>
-            } 
+            }
           />
-          <Route 
-            path="/dashboard/lab-tests" 
+          <Route
+            path="/dashboard/lab-tests"
             element={
               <ProtectedRoute>
                 <LabTests />
               </ProtectedRoute>
-            } 
+            }
           />
-          <Route 
-            path="/dashboard" 
+          <Route
+            path="/dashboard"
             element={
               <ProtectedRoute>
                 <Navigate to="/dashboard/appointments" replace />
               </ProtectedRoute>
-            } 
+            }
           />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

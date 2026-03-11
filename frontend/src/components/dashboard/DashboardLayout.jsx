@@ -23,7 +23,7 @@ const DashboardLayout = ({ children }) => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24">
           <div className="flex flex-col lg:flex-row gap-8">
-            
+
             {/* Elegant Sidebar */}
             <div className="w-full lg:w-72 flex-shrink-0 animate-fade-in-up">
               <div className="glass rounded-3xl p-6 sticky top-28 bg-white/90 backdrop-blur-xl border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
@@ -47,10 +47,9 @@ const DashboardLayout = ({ children }) => {
                         key={link.name}
                         to={link.path}
                         className={({ isActive }) =>
-                          `group flex items-center gap-3.5 px-4 py-3.5 rounded-2xl font-semibold transition-all duration-300 ${
-                            isActive 
-                              ? 'bg-primary-600 text-white shadow-md shadow-primary-600/20 translate-x-1' 
-                              : 'text-slate-600 hover:bg-slate-100/80 hover:text-slate-900'
+                          `group flex items-center gap-3.5 px-4 py-3.5 rounded-2xl font-semibold transition-all duration-300 ${isActive
+                            ? 'bg-primary-600 text-white shadow-md shadow-primary-600/20 translate-x-1'
+                            : 'text-slate-600 hover:bg-slate-100/80 hover:text-slate-900'
                           }`
                         }
                       >

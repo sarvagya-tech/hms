@@ -196,7 +196,7 @@ const HospitalSearch = () => {
                   <AlertCircle size={20} /> {error}
                 </div>
               )}
-              
+
               {filteredHospitals.length === 0 ? (
                 <div className="bg-slate-50 border border-slate-100 rounded-3xl p-12 text-center">
                   <div className="w-20 h-20 bg-slate-200 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-4">

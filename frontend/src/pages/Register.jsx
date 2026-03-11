@@ -8,7 +8,7 @@ const Register = () => {
   const navigate = useNavigate();
   const { register, error: authError, loading } = useAuth();
   const [localError, setLocalError] = useState('');
-  
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,7 +27,7 @@ const Register = () => {
       setLocalError("Passwords don't match");
       return;
     }
-    
+
     const success = await register(formData.name, formData.email, formData.password);
     if (success) {
       navigate('/dashboard');
@@ -38,7 +38,7 @@ const Register = () => {
     <Layout>
       <div className="min-h-[85vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div className="max-w-md w-full bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
-          
+
           <div className="text-center mb-8">
             <h2 className="text-3xl font-extrabold font-heading text-slate-900 mb-2">Create Account</h2>
             <p className="text-slate-500 font-medium">Join HealthSync to manage your healthcare.</p>

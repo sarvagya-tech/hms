@@ -10,7 +10,7 @@ const api = axios.create({
     'Content-Type': 'application/json',
   },
   // include HTTPOnly Cookies (JWT) in all cross-origin requests
-  withCredentials: true 
+  withCredentials: true
 });
 
 // Response Interceptor for Error Handling

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  FileText, Download, Eye, Calendar, FlaskConical, AlertCircle, 
-  Search, CheckCircle2, Plus, Clock, MapPin, ChevronRight, 
+import {
+  FileText, Download, Eye, Calendar, FlaskConical, AlertCircle,
+  Search, CheckCircle2, Plus, Clock, MapPin, ChevronRight,
   Beaker, Microscope, Activity, ShieldCheck
 } from 'lucide-react';
 import DashboardLayout from '../components/dashboard/DashboardLayout';
@@ -105,7 +105,7 @@ const LabTests = () => {
         price,
         collectionType: 'home'
       });
-      
+
       if (response.data.success) {
         setBookingStatus(`Success! Booking for ${testName} confirmed. ID: ${response.data.data._id}`);
       }
@@ -115,7 +115,7 @@ const LabTests = () => {
     setTimeout(() => setBookingStatus(null), 5000);
   };
 
-  const filteredReports = reports.filter(r => 
+  const filteredReports = reports.filter(r =>
     r.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     r.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -130,23 +130,21 @@ const LabTests = () => {
 
         {/* Modern Tab Switcher */}
         <div className="bg-slate-100 p-1.5 rounded-2xl flex items-center gap-1 w-fit">
-          <button 
+          <button
             onClick={() => setActiveTab('reports')}
-            className={`px-6 py-2.5 rounded-xl font-bold text-sm transition-all ${
-              activeTab === 'reports' 
-                ? 'bg-white text-primary-600 shadow-sm' 
+            className={`px-6 py-2.5 rounded-xl font-bold text-sm transition-all ${activeTab === 'reports'
+                ? 'bg-white text-primary-600 shadow-sm'
                 : 'text-slate-500 hover:text-slate-900'
-            }`}
+              }`}
           >
             My Reports
           </button>
-          <button 
+          <button
             onClick={() => setActiveTab('book')}
-            className={`px-6 py-2.5 rounded-xl font-bold text-sm transition-all ${
-              activeTab === 'book' 
-                ? 'bg-white text-primary-600 shadow-sm' 
+            className={`px-6 py-2.5 rounded-xl font-bold text-sm transition-all ${activeTab === 'book'
+                ? 'bg-white text-primary-600 shadow-sm'
                 : 'text-slate-500 hover:text-slate-900'
-            }`}
+              }`}
           >
             Book Blood Test
           </button>
@@ -165,9 +163,9 @@ const LabTests = () => {
             <h3 className="text-xl font-bold text-slate-800">Available Reports</h3>
             <div className="relative">
               <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-              <input 
-                type="text" 
-                placeholder="Search reports..." 
+              <input
+                type="text"
+                placeholder="Search reports..."
                 className="pl-11 pr-5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all font-medium text-sm w-64"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -190,8 +188,8 @@ const LabTests = () => {
           ) : (
             <div className="grid gap-5">
               {filteredReports.map((report, i) => (
-                <div 
-                  key={report._id} 
+                <div
+                  key={report._id}
                   className="group bg-white rounded-3xl border border-slate-100 p-6 hover:shadow-xl hover:border-primary-100 transition-all duration-300 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6 animate-fade-in-up"
                 >
                   <div className="flex items-start gap-5">
@@ -245,7 +243,7 @@ const LabTests = () => {
                       <span className="w-1.5 h-1.5 bg-slate-200 rounded-full"></span>
                       <span>Home Collection</span>
                     </div>
-                    <button 
+                    <button
                       onClick={() => handleBookTest(test.name, test.price)}
                       className="bg-primary-600 text-white px-6 py-3 rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-primary-600/20 transition-all active:scale-95"
                     >
@@ -272,9 +270,9 @@ const LabTests = () => {
               </div>
               <div className="flex flex-col items-center md:items-end gap-2 shrink-0">
                 <div className="flex -space-x-3 mb-1">
-                  {[1,2,3,4].map(i => (
+                  {[1, 2, 3, 4].map(i => (
                     <div key={i} className="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center">
-                      <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="user" className="w-full h-full rounded-full" />
+                      <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="user" className="w-full h-full rounded-full" />
                     </div>
                   ))}
                 </div>

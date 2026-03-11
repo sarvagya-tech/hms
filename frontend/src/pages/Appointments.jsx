@@ -82,8 +82,8 @@ const Appointments = () => {
                         {apt.hospital?.name || "Dr. Speciality Clinic"}
                       </h3>
                       <span className={`px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider ${apt.status === 'scheduled' ? 'bg-amber-100 text-amber-700' :
-                          apt.status === 'completed' ? 'bg-emerald-100 text-emerald-700' :
-                            'bg-slate-100 text-slate-700'
+                        apt.status === 'completed' ? 'bg-emerald-100 text-emerald-700' :
+                          'bg-slate-100 text-slate-700'
                         }`}>
                         • {apt.status}
                       </span>

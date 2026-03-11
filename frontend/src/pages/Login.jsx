@@ -22,7 +22,7 @@ const Login = () => {
     <Layout>
       <div className="min-h-[80vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div className="max-w-md w-full bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
-          
+
           <div className="text-center mb-8">
             <div className="mx-auto bg-primary-100 text-primary-600 h-16 w-16 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
               <Activity size={32} />
@@ -79,9 +79,8 @@ const Login = () => {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full flex justify-center py-3.5 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white transition-all ${
-                loading ? 'bg-primary-400 cursor-not-allowed' : 'bg-primary-600 hover:bg-primary-700 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500'
-              }`}
+              className={`w-full flex justify-center py-3.5 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white transition-all ${loading ? 'bg-primary-400 cursor-not-allowed' : 'bg-primary-600 hover:bg-primary-700 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500'
+                }`}
             >
               {loading ? 'Signing in...' : 'Sign In'}
             </button>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { 
-  ArrowRight, Activity, Calendar, Award, Search, Shield, Heart, 
+import {
+  ArrowRight, Activity, Calendar, Award, Search, Shield, Heart,
   Stethoscope, Pill, ClipboardList, FlaskConical, Siren, BarChart3,
   Star, Quote, ChevronRight, Zap, Users, Building2, TrendingUp
 } from 'lucide-react';
@@ -23,7 +23,7 @@ const Home = () => {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 lg:pt-36 lg:pb-28">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            
+
             {/* Left - Content */}
             <div className="space-y-8 animate-fade-in-up z-10">
               <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/[0.07] border border-white/[0.08] backdrop-blur-md text-primary-200 font-semibold text-sm">
@@ -33,27 +33,27 @@ const Home = () => {
                 </span>
                 Trusted by 50,000+ Patients
               </div>
-              
+
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black font-heading text-white leading-[1.05] tracking-tight">
                 Healthcare,<br />
                 <span className="gradient-text">Reimagined.</span>
               </h1>
-              
+
               <p className="text-lg lg:text-xl text-slate-300/90 leading-relaxed max-w-xl">
                 Your end-to-end digital health platform. Book top doctors, order authentic medicines, and manage reports — seamlessly.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <Link 
-                  to="/hospitals" 
+                <Link
+                  to="/hospitals"
                   className="group relative bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white px-8 py-4 rounded-2xl font-bold transition-all text-center hover:shadow-2xl hover:shadow-primary-600/25 flex items-center justify-center gap-2.5 hover:-translate-y-1 overflow-hidden"
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
                   <span className="relative">Find Doctors</span>
                   <ArrowRight size={20} className="relative group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link 
-                  to="/pharmacy" 
+                <Link
+                  to="/pharmacy"
                   className="bg-white/[0.06] hover:bg-white/[0.12] text-white border border-white/[0.12] px-8 py-4 rounded-2xl font-bold transition-all text-center flex items-center justify-center gap-2.5 hover:-translate-y-1 backdrop-blur-sm"
                 >
                   Order Medicines
@@ -84,12 +84,12 @@ const Home = () => {
             <div className="relative hidden lg:block">
               {/* Decorative blob */}
               <div className="absolute -inset-10 blob bg-gradient-to-br from-primary-400/20 to-emerald-400/20 blur-2xl" />
-              
+
               <div className="relative space-y-5 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
                 {/* Card Container */}
                 <div className="bg-white/[0.95] backdrop-blur-xl border border-white/80 p-8 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] transform rotate-1 hover:rotate-0 transition-transform duration-700">
                   <div className="space-y-5">
-                    
+
                     {/* Mock Card 1 - Appointment */}
                     <div className="flex items-center gap-4 bg-gradient-to-r from-blue-50 to-white p-4 rounded-2xl border border-blue-100/60 shadow-sm hover:shadow-md transition-shadow">
                       <div className="p-3 bg-blue-100 text-blue-600 rounded-xl shrink-0">
@@ -148,7 +148,7 @@ const Home = () => {
         {/* Wave divider */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-            <path d="M0 120L60 105C120 90 240 60 360 52.5C480 45 600 60 720 67.5C840 75 960 75 1080 67.5C1200 60 1320 45 1380 37.5L1440 30V120H0Z" fill="#f8fafc"/>
+            <path d="M0 120L60 105C120 90 240 60 360 52.5C480 45 600 60 720 67.5C840 75 960 75 1080 67.5C1200 60 1320 45 1380 37.5L1440 30V120H0Z" fill="#f8fafc" />
           </svg>
         </div>
       </section>
@@ -201,7 +201,7 @@ const Home = () => {
                 >
                   {/* Hover gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-white opacity-0 group-hover:opacity-100 transition-opacity" />
-                  
+
                   <div className="relative">
                     <div className={`w-14 h-14 rounded-2xl border flex items-center justify-center mb-6 transition-all duration-300 shadow-sm group-hover:shadow-lg group-hover:scale-110 ${colorMap[feature.color]}`}>
                       <Icon size={24} />
@@ -227,7 +227,7 @@ const Home = () => {
       <section className="section-padding bg-white relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-50 rounded-full blur-[100px] opacity-50" />
-        
+
         <div className="section-container relative">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-600 font-semibold text-sm mb-6">
@@ -283,7 +283,7 @@ const Home = () => {
         {/* Glowing orbs */}
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary-500/10 rounded-full blur-[80px]" />
         <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px]" />
-        
+
         <div className="relative section-container">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {[
@@ -351,7 +351,7 @@ const Home = () => {
                 color: 'bg-gradient-to-br from-emerald-400 to-teal-600',
               },
             ].map((testimonial, i) => (
-              <div 
+              <div
                 key={testimonial.name}
                 className="group bg-white rounded-3xl border border-slate-100 p-8 card-hover relative animate-fade-in-up"
                 style={{ animationDelay: `${i * 100}ms`, opacity: 0 }}
@@ -360,7 +360,7 @@ const Home = () => {
                 <div className="absolute top-6 right-6 text-slate-100 group-hover:text-primary-100 transition-colors">
                   <Quote size={40} />
                 </div>
-                
+
                 <div className="relative">
                   {/* Stars */}
                   <div className="flex gap-1 mb-5">
@@ -396,30 +396,30 @@ const Home = () => {
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-[80px]" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-[80px]" />
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-        
+
         <div className="relative section-container text-center">
           <div className="max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/10 text-white/80 font-semibold text-sm mb-8 backdrop-blur-sm">
               <Shield size={14} /> Start Your Healthcare Journey
             </div>
-            
+
             <h2 className="text-3xl md:text-4xl lg:text-6xl font-black font-heading text-white mb-6 tracking-tight leading-tight">
               Ready to Take Control of Your Health?
             </h2>
             <p className="text-lg lg:text-xl text-white/70 leading-relaxed mb-10 max-w-2xl mx-auto">
               Join 50,000+ patients who trust HealthSync for seamless, modern healthcare. Sign up free today.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/register" 
+              <Link
+                to="/register"
                 className="group bg-white text-primary-700 px-10 py-4.5 rounded-2xl font-bold text-lg transition-all hover:shadow-2xl hover:shadow-white/20 hover:-translate-y-1 flex items-center justify-center gap-2"
               >
-                Get Started Free 
+                Get Started Free
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link 
-                to="/hospitals" 
+              <Link
+                to="/hospitals"
                 className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-10 py-4 rounded-2xl font-bold text-lg transition-all hover:-translate-y-1 backdrop-blur-sm flex items-center justify-center gap-2"
               >
                 Browse Doctors
