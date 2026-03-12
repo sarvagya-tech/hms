@@ -20,10 +20,17 @@ app.use(cookieParser());
 
 // Enable CORS
 const allowedOrigins = [
-  'http://localhost:5174',
   'http://localhost:5173',
+  'http://localhost:5174',
+  'http://localhost:5175',
+  'http://localhost:5176',
+  'http://localhost:5177',
+  'http://127.0.0.1:5173',
+  'http://127.0.0.1:5174',
+  'http://127.0.0.1:5175',
+  'http://127.0.0.1:5176',
   process.env.CORS_ORIGIN
-].filter(origin => origin); // Remove undefined/null
+].filter(origin => origin);
 
 app.use(
   cors({
@@ -31,6 +38,12 @@ app.use(
     credentials: true,
   })
 );
+
+// Basic request logger
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.url} - Origin: ${req.headers.origin}`);
+  next();
+});
 
 // Route files
 const auth = require('./routes/auth');
